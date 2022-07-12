@@ -7,13 +7,13 @@ void main() {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black54,
-          title: Text('Warm Baby'),
+          title: const Text('Warm Baby'),
           centerTitle: true,
         ),
         body: const Center(
           child: Text(
-            'сделано мамами с любовью',
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            'children clothes',
+            style: TextStyle(fontSize: 16, fontFamily: 'Montserrat'),
           ),
         ),
         floatingActionButton: FloatingActionButton(
