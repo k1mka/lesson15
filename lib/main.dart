@@ -1,6 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:lesson15/search_widget.dart';
+
+import 'condition_order.dart';
 
 void main() {
+  final List<Order> orders = [
+    Order(
+        ttn: '12-391-9238123',
+        location: '128 department Nova Poshta',
+        data: DateTime.now()),
+    Order(
+        ttn: '12-391-9238123',
+        location: '128 department Nova Poshta',
+        data: DateTime.now()),
+    Order(
+        ttn: '12-391-9238123',
+        location: '128 department Nova Poshta',
+        data: DateTime.now()),
+    Order(
+        ttn: '12-391-9238123',
+        location: '128 department Nova Poshta',
+        data: DateTime.now()),
+    Order(
+        ttn: '12-391-9238123',
+        location: '128 department Nova Poshta',
+        data: DateTime.now()),
+  ];
+
   runApp(
     MaterialApp(
       title: 'WarmBaby',
@@ -10,28 +36,20 @@ void main() {
           title: const Text('W.a.r.m Baby'),
           centerTitle: true,
         ),
-        body: Row(
+        body: ListView(
           children: [
-            IconButton(
-              icon: const Icon(
-                Icons.search,
-                size: 34,
-              ),
-              onPressed: () {
-                print('поиск');
-              },
-            ),
-            const Text(
-              'Search',
-              style: TextStyle(
-                  fontSize: 24, fontFamily: 'Montserrat', color: Colors.black),
+            const SearchWidget(),
+            Order(
+              ttn: '98275928374',
+              location: 'fjafhj',
+              data: DateTime.now(),
             ),
           ],
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.black12,
           onPressed: () {},
-          child: Text('add'),
+          child: const Text('add'),
         ),
       ),
     ),
